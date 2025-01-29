@@ -4,3 +4,13 @@ pygame
 gymnasium ## A fork of gym
 matplotlib
 pillow
+
+
+## for ML_Agent with Unity
+mlagents
+torch
+numpy
+matplotlib
+pyyaml
+gym
+pyglet
