@@ -2,11 +2,9 @@
 
 A reinforcement learning project using Unity ML-Agents for training an agent to navigate to a target. Features both a simple Python environment and a visually identical Unity environment.
 
-<div style="width: 700px;">
-  <video width="700" controls>
-    <source src="Training_the_agent.mp4" type="video/mp4">
-  </video>
-</div>
+
+[![Project Demo Video](https://img.youtube.com/vi/A3t3jSUbtQM/0.jpg)](https://www.youtube.com/watch?v=A3t3jSUbtQM)
+
 
 ## Project Structure
 ```
