@@ -5,7 +5,7 @@ This repository hosts diffrent reinforcement learning implementations across div
 ## Projects
 
 ### 1. **OpenAI Gym Dino DQN**  
-Trains a **Deep Q-Network (DQN)** agent to play a Pygame-based Chrome Dinosaur game. The agent learns to jump obstacles using visual input and reward feedback.  
+Trains a **Deep Q-Network (DQN)** agent to play a Pygame-based Chrome Dinosaur game. The agent learns to jump obstacles using visual input and reward feedback. Uses `gymnasium` a fork of `openAI Gym` framework.
 **Dependencies**: `numpy`, `torch`, `pygame`, `gymnasium`, `matplotlib`.
 
 ### 2. **MineRL PPO Agent**  
