@@ -1,3 +1,4 @@
+##For Dino agent training
 numpy
 torch
 pygame
@@ -6,11 +7,17 @@ matplotlib
 pillow
 
 
-## for ML_Agent with Unity
-mlagents
-torch
-numpy
-matplotlib
-pyyaml
+
+##For MineRL enviroment PPO agent training
+minerl
 gym
+logging
+tqdm
+
+
+
+
+##For ML_Agent with Unity 
+mlagents
+pyyaml
 pyglet
