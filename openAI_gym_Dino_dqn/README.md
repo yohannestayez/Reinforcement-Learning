@@ -2,6 +2,8 @@
 
 This mini project implements a Deep Q-Network (DQN) agent that learns to play a Pygame-based version of the Chrome Dinosaur game. The agent learns to jump over obstacles to achieve the highest possible score.
 
+### click the image below to see the Demo video
+[![Project Demo Video](https://img.youtube.com/vi/dPcepuM1H8U/0.jpg)](https://www.youtube.com/watch?v=dPcepuM1H8U)
 ## Project Structure
 
 ```

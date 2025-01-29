@@ -10,8 +10,7 @@ Trains a **Deep Q-Network (DQN)** agent to play a Pygame-based Chrome Dinosaur g
 
 ### 2. **MineRL PPO Agent**  
 Implements a **Proximal Policy Optimization (PPO)** agent in Minecraft (`MineRL` environment) that performs gathering resources and lighting campfires tasks.  
--  **Dependencies**: `numpy`, `torch`,`minerl`, `gym`, `tqdm`.  
--  **Note**: Requires substantial computational resources (GPU recommended).
+-  **Dependencies**: `numpy`, `torch`,`minerl`, `gym`, `tqdm`.
 
 ### 3. **ML-Agents Unity**  
 Trains a 2D agent in a Unity ML-Agents environment to navigate to targets.  
