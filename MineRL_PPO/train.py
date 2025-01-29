@@ -10,7 +10,7 @@ from utils.visualization import plot_training_rewards, plot_success_rate
 
 def setup_logging():
     """Setup logging configuration."""
-    log_dir = "logs"
+    log_dir = "data/logs"
     os.makedirs(log_dir, exist_ok=True)
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -31,8 +31,8 @@ def train(num_episodes=1000, render_interval=10):
     logger = setup_logging()
     
     # Create directories for saving
-    os.makedirs("models", exist_ok=True)
-    os.makedirs("plots", exist_ok=True)
+    os.makedirs("data/models", exist_ok=True)
+    os.makedirs("data/plots", exist_ok=True)
     
     # Initialize environment and agent
     env = CampfireEnv()
@@ -88,12 +88,12 @@ def train(num_episodes=1000, render_interval=10):
         # Save best model
         if episode_reward > best_reward:
             best_reward = episode_reward
-            agent.save(os.path.join("models", "best_model.pth"))
+            agent.save(os.path.join("data/models", "best_model.pth"))
             logger.info(f"New best model saved with reward: {best_reward:.2f}")
         
         # Save checkpoint every 100 episodes
         if episode % 100 == 0:
-            agent.save(os.path.join("models", f"checkpoint_{episode}.pth"))
+            agent.save(os.path.join("data/models", f"checkpoint_{episode}.pth"))
             
         # Calculate and log moving average
         if len(episode_rewards) >= 100:
@@ -102,15 +102,15 @@ def train(num_episodes=1000, render_interval=10):
         
         # Plot and save metrics every 100 episodes
         if episode % 100 == 0 and episode > 0:
-            plot_training_rewards(episode_rewards, save_path=os.path.join("plots", f"rewards_{episode}.png"))
-            plot_success_rate(episode_successes, save_path=os.path.join("plots", f"success_rate_{episode}.png"))
+            plot_training_rewards(episode_rewards, save_path=os.path.join("data/plots", f"rewards_{episode}.png"))
+            plot_success_rate(episode_successes, save_path=os.path.join("data/plots", f"success_rate_{episode}.png"))
     
     # Save final model
-    agent.save(os.path.join("models", "final_model.pth"))
+    agent.save(os.path.join("data/models", "final_model.pth"))
     
     # Save final plots
-    plot_training_rewards(episode_rewards, save_path=os.path.join("plots", "final_rewards.png"))
-    plot_success_rate(episode_successes, save_path=os.path.join("plots", "final_success_rate.png"))
+    plot_training_rewards(episode_rewards, save_path=os.path.join("data/plots", "final_rewards.png"))
+    plot_success_rate(episode_successes, save_path=os.path.join("data/plots", "final_success_rate.png"))
     
     logger.info("Training completed!")
     
