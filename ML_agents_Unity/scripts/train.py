@@ -101,7 +101,7 @@ def main():
     hyperparams = config['behaviors']['NavigationAgent']['hyperparameters']
     
     # Initialize environment and agent
-    env = NavigationEnvironment()
+    env = NavigationEnvironment(use_unity=False) 
     state_dim = env.spec.observation_specs[0].shape[0]
     action_dim = env.spec.action_spec.continuous_size
     
@@ -139,7 +139,7 @@ def main():
                 
                 # Visualize the environment
                 env.render()
-                pyglet.clock.tick(30)  # Limit to 30 FPS
+                pyglet.clock.tick(120) 
                 
                 states.append(state)
                 actions.append(action)

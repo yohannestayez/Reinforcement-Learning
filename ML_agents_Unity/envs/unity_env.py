@@ -8,7 +8,7 @@ import math
 class SimpleNavigationEnv(gym.Env):
     """
     A simple 2D navigation environment where an agent needs to reach a target.
-    This is a substitute for the Unity environment while we set up the Unity project.
+    The agent can move in 2D space and the target is randomly placed.
     """
     def __init__(self):
         super(SimpleNavigationEnv, self).__init__()
