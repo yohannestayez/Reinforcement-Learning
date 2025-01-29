@@ -1,7 +1,6 @@
-gym
-gym-chrome-dino
-torch
 numpy
+torch
+pygame
+gymnasium ## A fork of gym
 matplotlib
-Pillow
-opencv-python
+pillow
