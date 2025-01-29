@@ -50,7 +50,7 @@ def train(render=False):
     agent = DQNAgent()
     
     # Training parameters
-    episodes = 1000
+    episodes = 500
     max_steps = 5000
     save_freq = 100
     print_freq = 10
